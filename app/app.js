@@ -64,6 +64,25 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
     controller:'affiliators'
   })
 
+  //Update
+
+  .when("/Admin/Update/:id",{
+    templateUrl:"views/pages/admin/adminupdate.html",
+    controller:'adminupdate'
+  })
+  .when("/Customer/Update/:id",{
+    templateUrl:"views/pages/admin/customerupdate.html",
+    controller:'customerupdate'
+  })
+  .when("/Shop/Update/:id",{
+    templateUrl:"views/pages/admin/shopupdate.html",
+    controller:'shopupdate'
+  })
+  .when("/Affiliator/Update/:id",{
+    templateUrl:"views/pages/admin/affiliatorupdate.html",
+    controller:'affiliatorupdate'
+  })
+
 
 
   // Shop owner route
@@ -84,6 +103,18 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
   .when("/Admin/Delete/:id",{
     templateUrl:"views/pages/admin/admininfo.html",
     controller:'admindelete'
+  })
+  .when("/Customer/Delete/:id",{
+    templateUrl:"views/pages/admin/customerinfo.html",
+    controller:'customerdelete'
+  })
+  .when("/Shop/Delete/:id",{
+    templateUrl:"views/pages/admin/shopinfo.html",
+    controller:'shopdelete'
+  })
+  .when("/Affiliator/Delete/:id",{
+    templateUrl:"views/pages/admin/affiliatorinfo.html",
+    controller:'affiliatordelete'
   })
  // All other case
   .otherwise({

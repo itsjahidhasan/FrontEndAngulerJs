@@ -55,34 +55,3 @@
   </nav>
   <!-- END nav -->
 </section>
-<h3 style="margin-left: 600px">ALL Affiliators</h3>
-<div style="margin-left: 210px; margin-right: 210px">
-  <div
-    class="card"
-    style="
-      width: 22rem;
-      float: left;
-      margin-left: 5px;
-      margin-right: 5px;
-      margin-top: 5px;
-    "
-    ng-repeat="af in affiliators"
-  >
-    <img src="views/assects/admin.png" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">{{af.Affiliate_Name}}</h5>
-      <p class="card-text"></p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Email: {{af.Affiliate_Email}}</li>
-      <li class="list-group-item">Phone: {{af.Affiliate_Phone}}</li>
-      <li class="list-group-item">Code: {{af.Affiliate_Code}}</li>
-    </ul>
-    <div class="card-body">
-      <a href="#!/Affiliator/Update/{{af.Affiliate_Id}}" class="card-link">Update</a>
-      <a href="#!/Affiliator/Delete/{{af.Affiliate_Id}}" class="card-link"
-        >Delete</a
-      >
-    </div>
-  </div>
-</div>
