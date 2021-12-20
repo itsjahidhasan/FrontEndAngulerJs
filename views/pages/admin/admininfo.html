@@ -55,3 +55,32 @@
   </nav>
   <!-- END nav -->
 </section>
+<h3 style="margin-left: 600px">ALL Admins</h3>
+<div style="margin-left: 210px; margin-right: 210px">
+  <div
+    class="card"
+    style="
+      width: 22rem;
+      float: left;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 5px;
+    "
+    ng-repeat="a in admins"
+  >
+    <img src="views/assects/admin.png" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{a.Admin_Name}}</h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Email: {{a.Admin_Email}}</li>
+      <li class="list-group-item">Phone: {{a.Admin_Phone}}</li>
+      <li class="list-group-item">/{{a.Admin_Type}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="" class="card-link">Update</a>
+      <a href="" class="card-link">Delete</a>
+    </div>
+  </div>
+</div>

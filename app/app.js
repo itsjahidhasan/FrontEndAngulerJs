@@ -43,6 +43,10 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
     templateUrl:"views/pages/admin/notice.html",
     // controller:''
   })
+  .when("/Admin/All",{
+    templateUrl:"views/pages/admin/admininfo.html",
+    controller:'admins'
+  })
 
 
 
