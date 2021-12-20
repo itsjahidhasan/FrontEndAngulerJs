@@ -56,18 +56,40 @@
   <!-- END nav -->
 </section>
 <div style="width: 50vw; margin-left: 25vw">
-  <div class="input-group flex-nowrap">
-    <span class="input-group-text" id="addon-wrapping">@</span>
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Write your notice!"
-      aria-label="notice"
-      aria-describedby="addon-wrapping"
-      required
-    />
-  </div>
-  <div style="margin-left: 45vw; margin-top: 1vw">
-    <input type="submit" value="Post" class="btn btn-danger" />
-  </div>
+  <form action="" method="post" ng-submit="noticepost()">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping">@</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Write your notice!"
+        aria-label="notice"
+        aria-describedby="addon-wrapping"
+        ng-model="data.Notice_Post"
+        required
+      />
+
+      <input
+        type="hidden"
+        class="form-control"
+        placeholder="Write your notice!"
+        aria-label="notice"
+        aria-describedby="addon-wrapping"
+        ng-model="data.Admin_Id"
+        required
+      />
+      <input
+        type="hidden"
+        class="form-control"
+        placeholder="Write your notice!"
+        aria-label="notice"
+        aria-describedby="addon-wrapping"
+        ng-model="data.Post_Date"
+        required
+      />
+    </div>
+    <div style="margin-left: 45vw; margin-top: 1vw">
+      <input type="submit" value="Post" class="btn btn-danger" />
+    </div>
+  </form>
 </div>

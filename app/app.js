@@ -29,7 +29,7 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
   })
   .when("/Admin/Home",{
     templateUrl:"views/pages/admin/home.html",
-    // controller:''
+    controller:'home'
   })
   .when("/Admin/Profile",{
     templateUrl:"views/pages/admin/profile.html",
@@ -41,15 +41,27 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
   })
   .when("/Admin/Notice",{
     templateUrl:"views/pages/admin/notice.html",
-    // controller:''
+    controller:'notices'
   })
   .when("/Notice/Post",{
     templateUrl:"views/pages/admin/noticepost.html",
-    // controller:''
+    controller:'noticepost'
   })
   .when("/Admin/All",{
     templateUrl:"views/pages/admin/admininfo.html",
     controller:'admins'
+  })
+  .when("/Customer/All",{
+    templateUrl:"views/pages/admin/customerinfo.html",
+    controller:'customers'
+  })
+  .when("/Shopowner/All",{
+    templateUrl:"views/pages/admin/shopinfo.html",
+    controller:'shops'
+  })
+  .when("/Affiliator/All",{
+    templateUrl:"views/pages/admin/affiliatorinfo.html",
+    controller:'affiliators'
   })
 
 
@@ -66,6 +78,12 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
   .when("/Logout",{
     templateUrl:"views/pages/home.html",
     controller:'logout'
+  })
+
+  //delete
+  .when("/Admin/Delete/:id",{
+    templateUrl:"views/pages/admin/admininfo.html",
+    controller:'admindelete'
   })
  // All other case
   .otherwise({

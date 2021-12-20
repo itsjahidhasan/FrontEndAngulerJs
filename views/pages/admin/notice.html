@@ -55,9 +55,12 @@
   </nav>
   <!-- END nav -->
 </section>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields
-  below.
+<div
+  class="alert alert-warning alert-dismissible fade show"
+  role="alert"
+  ng-repeat="n in notices"
+>
+  <strong>{{n.Post_Date}}</strong>| {{n.Notice_Post}}
   <button
     type="button"
     class="btn-close"
